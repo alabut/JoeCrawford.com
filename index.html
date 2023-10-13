@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+        <meta property="og:image" content="https://artlung.com/blog/wp-content/uploads/2023/10/6C42D53E-8D98-4FC9-AECB-B7A51A92D17C-800x800@2x.jpg">
+        <title>Joe Crawford | Web developer from San Diego, CA</title>
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <style type="text/css">
+			
+/* DESIGN DEFAULTS CARRIED OVER FROM DESIGN SPRINT ARTICLE */
+
+
+header h2 {
+    color: #fff;
+    font-size: 36px;
+    font-weight: 100;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    text-align: left;
+}
+
+h2 {
+    font-family: Georgia;
+    font-size: 35px;
+    font-style: italic;
+    font-weight: 900;
+    margin-top: 40px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+article h2::after {
+    border-top: 10px solid #f15403;
+    content: '';
+    display: block;
+    margin: 30px auto;
+    width: 80px;
+}
+
+h3 {
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    font-size: 22px;
+    font-weight: 900;
+    margin-bottom: 20px;
+    margin-top: 50px;
+    padding-top: 80px;
+    text-transform: uppercase;
+}
+
+article h2 + h3, article .dark h2 + article .dark h3 {
+    background: none !important;
+    margin-top: 30px;
+    padding-top: 26px;
+}
+
+h4 {
+    background: #222;
+    color: #fff;
+    display: inline-block;
+    font-family: Helvetica;
+    font-size: 22px;
+    font-weight: 900;
+    margin: 20px 0;
+    padding: 5px 10px;
+    text-transform: uppercase;
+}
+
+h5 {
+    color: rgba(255,255,255,0.5);
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    font-weight: 300;
+    letter-spacing: 3px;
+    margin-top: 0;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.work-container h5 {
+    margin-bottom: 0;
+}
+
+article a {
+    border-bottom: 2px solid #f15403;
+    color: #222;
+    padding-bottom: 2px;
+}
+
+article a:hover {
+    border-bottom-color: transparent;
+    color: #f15403;
+    text-decoration: none;
+}
+
+article p, article li {
+    font-family: Georgia;
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+article .dark.bio-and-footer {
+    background: rgba(17,17,17,1);
+    border-bottom: none;
+    margin-top: 80px;
+    margin-bottom: 0;
+    padding: 45px 0 25px;
+}
+
+article .dark.bio-and-footer,
+article .dark.bio-and-footer strong,
+article .dark.bio-and-footer a {
+    color: #fff;
+}
+
+article .bio-and-footer p:last-of-type {
+    margin-bottom: 10px;
+}
+
+@media only screen and (max-width : 767.98px) {
+    article .dark.bio-and-footer {
+        text-align: center;
+    }
+
+    .avatar img {
+        max-height: 100px;
+        max-width: 100px;
+    }
+}
+
+.ornamental-first-letter {
+    font-size: 50px;
+    line-height: 50px;
+    /******************
+    ⬆⬆⬆ Font-size and line-height must be matching for the proper effect.
+    ******************/
+    color: #f15403;
+    float: left;
+    font-weight: 900;
+    margin-right: 10px;
+}
+			
+/* BLOG LAYOUT */
+
+body, html {
+    background: #222;
+}
+
+header {
+    background: none;
+}
+
+article .dark.bio-and-footer {
+    border: none;
+    margin-top: 20px;
+}
+
+article .listbox h2 {
+    margin: 0;
+}
+
+article .listbox h2::after {
+    margin: 25px auto 0;
+}
+
+article .listbox li::before {
+    content: none;
+}
+
+article .listbox li:last-child {
+    margin-bottom: 45px;
+}
+
+/* NEW CUSTOM STYLES (should they be the default? just try disabling designsprint.css to see how nicely minimal the bootstrap-only version is...) */
+
+.minimal-header header {
+    text-align: center;
+}
+
+.minimal-header .header-wrap {
+    padding: 100px 15px;
+}
+
+.minimal-header .logo {
+    display: inline-flex;;
+    filter: invert(1);
+    left: initial;
+    position: relative;
+    top: initial;
+}
+
+.minimal-header .logo:hover {
+    /*color: #f15403;*/
+    filter: invert(0);
+}
+
+.minimal-header header h2 {
+	color: #666;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+article .blockquote.table-of-contents {
+    margin: 40px 0;
+    padding: 30px 30px 25px;
+}
+
+article .blockquote.table-of-contents ol {
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+article aside li {
+    line-height: 120%;
+}
+
+footer.byline:before {
+    left: calc(50% - 107px);
+    position: absolute;
+    top: -80px;
+}
+
+footer.byline {
+    background: rgba(0,0,0,0.05);
+    border-radius: 10px;
+    margin-bottom: 20px;
+    margin-top: 130px;
+    padding: 40px;
+    position: relative;
+}
+
+footer.byline p {
+    margin-bottom: 5px;
+}
+
+aside p:last-of-type, footer.byline p:last-of-type {
+    margin: 0;
+}
+
+aside h2 {
+    margin-top: 0;
+}
+
+.minimal-header aside.blockquote:first-of-type {
+    margin-top: 0;
+}
+
+.minimal-header aside.blockquote.giant-quotemark {
+    background-position: 70px 70px;
+    background-repeat: no-repeat;
+    padding-left: 193px;
+}
+
+.minimal-header aside.blockquote p {
+    font-weight: 600;
+    line-height: 140%;
+}
+
+.minimal-header aside.blockquote em {
+    display: block;
+    font-size: 18px;
+    font-weight: 300;
+    margin-top: 5px;
+    opacity: 0.8;
+}
+
+.giant-quotemark:nth-of-type(odd) a {
+    color: #fff;
+}
+
+.giant-quotemark:nth-of-type(odd) a:hover {
+    border-color: #fff;
+}
+
+aside.blockquote.giant-quotemark:nth-of-type(even) {
+    background-color: #f2f2f2;
+    color: #222;
+}
+
+.listbox {
+    overflow: hidden;
+    position: relative;
+}
+
+.listbox li {
+    padding: 5px 0 25px;
+}
+
+.listbox li:first-of-type {
+    padding-top: 25px;
+}
+
+.listbox:after, aside.blockquote.giant-quotemark:nth-of-type(even):after {
+    background-color: #000;
+}
+
+/* DARK MODE */
+
+.dark-mode {
+	background-color: #222;
+	color: #eee;
+}
+
+.dark-mode.minimal-header .logo {
+	filter: invert(0);
+}
+
+.dark-mode.minimal-header header h2 {
+	color: #eee;
+}
+
+.dark-mode h3 {
+    color: #000;
+    filter: invert(1);
+}
+
+
+.dark-mode h4 {
+    color: rgba(255,255,255,0.5);
+    font-size: 16px;
+    margin: 0;
+}
+
+.dark-mode footer.byline {
+	background: rgba(255,255,255,0.05);
+}
+
+.dark-mode footer.byline:before {
+	filter: invert(1);
+}
+
+.dark-mode article a {
+	color: #f15403;
+}
+
+.dark-mode article a:hover {
+	border-color: #eee;
+	color: #eee;
+}
+
+/* JOE'S OVERRIDES GO HERE */
+
+h4 a {
+	color: skyblue;
+}
+
+h4 a:hover {
+	color: #fff;
+}
+
+.ornamental-first-letter {
+	color: skyblue;
+}
+
+article {
+	padding-bottom: 50px;
+}
+
+article .signature {
+	padding-top: 30px;
+}
+
+/* MOBILE STYLES */
+
+@media only screen and (max-width: 575.98px) {
+
+    .dark-mode header:before,
+    .dark-mode header:after {
+        top: 51px;
+        height: 260px;
+        left: calc(50% - 130px);
+        width: 260px;
+    }
+
+
+    .minimal-header .header-wrap {
+        padding: 50px 15px;
+    }
+
+    .minimal-header aside.blockquote {
+        padding: 40px;
+    }
+
+    .minimal-header aside.blockquote:before {
+        right: 10%;
+    }
+
+    aside ol {
+        margin: 0;
+        padding: 0;
+    }
+
+    aside li:last-of-type {
+        margin-bottom: 0;
+    }
+
+}
+
+        </style>
+    </head>
+    <body class="minimal-header dark-mode">
+        <header>
+            <div class="header-wrap">
+                <img 
+					alt="Headshot of Joe"
+					class="img-responsive center-block"
+					height="100"
+ 					src="https://artlung.com/blog/wp-content/uploads/2023/10/6C42D53E-8D98-4FC9-AECB-B7A51A92D17C-800x800@2x.jpg" 
+					style="border-radius: 100%; border: 5px solid skyblue;"
+					width="100" 
+				/>
+                <h1>Joe Crawford</h1>
+                <h2>Web developer from San Diego, CA</h2>
+                <h4><a href="resume.pdf">Resume</a> | <a href="https://github.com/artlung">GitHub</a> | <a href="mailto:joe@artlung.com">Email</a></h4>
+            </div> <!-- /header-wrap-none -->
+        </header>
+
+        <article>
+            <section>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-8 col-sm-offset-2">
+
+							<p><span class="ornamental-first-letter">C</span>ras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Maecenas sed diam eget risus varius blandit sit amet non magna. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec id elit non mi porta gravida at eget metus.</p>
+
+							<p>Cras mattis consectetur purus sit amet fermentum. Nulla vitae elit libero, a pharetra augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ullamcorper nulla non metus auctor fringilla. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+                            <p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras mattis consectetur purus sit amet fermentum. Donec id elit non mi porta gravida at eget metus. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Maecenas sed diam eget risus varius blandit sit amet non magna. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+
+							<p>
+								<img 
+									alt="Signature"
+									class="img-responsive center-block signature"
+									height="69"
+									src="http://d32mxho067pe0f.cloudfront.net/images/about/signature.png"
+									width="235"
+								/>
+							</p>
+
+                        </div> <!-- /col-sm-8 col-sm-offset-2 -->
+                    </div> <!-- row -->
+                </div> <!-- /container -->
+            </section>
+        </article>
+    </body>
+</html>
